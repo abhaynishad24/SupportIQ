@@ -230,7 +230,7 @@ export const updateTicketStatus = async (req: Request, res: Response) => {
 
     const ticket = result.rows[0];
     const ownerResult = await pool.query(
-      'SELECT email FROM users WHERE id = $1',
+      'SELECT name, email FROM users WHERE id = $1',
       [ticket.created_by]
     );
     const ownerEmail = ownerResult.rows[0]?.email;
@@ -238,6 +238,7 @@ export const updateTicketStatus = async (req: Request, res: Response) => {
     if (ownerEmail && (status === 'RESOLVED' || status === 'REJECTED')) {
       sendTicketStatusEmail({
         to: ownerEmail,
+        recipientName: ownerResult.rows[0]?.name,
         title: ticket.title,
         ticketId,
         status
