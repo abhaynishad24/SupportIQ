@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import dns from 'node:dns';
 
 dotenv.config();
-dns.setDefaultResultOrder('ipv4first');
+dns.setDefaultResultOrder('ipv4first');//defaultresult
 
 const smtpUser = process.env.SMTP_USER || process.env.EMAIL_USER;
 const smtpPass = process.env.SMTP_PASS || process.env.EMAIL_PASS;
