@@ -280,10 +280,10 @@ function TicketDashboard() {
             <p className="text-xs text-slate-400">Automated Support & Ticketing Engine</p>
           </div>
           
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 text-xs bg-slate-900/60 px-3 py-1.5 rounded-xl border border-slate-700">
+          <div className="w-full md:w-auto flex flex-wrap items-center justify-end gap-3">
+            <div className="min-w-0 max-w-full flex flex-wrap items-center gap-2 text-xs bg-slate-900/60 px-3 py-1.5 rounded-xl border border-slate-700">
               <UserIcon className="w-4 h-4 text-slate-400" />
-              <span className="font-semibold text-slate-200">{user?.email}</span>
+              <span className="min-w-0 break-all font-semibold text-slate-200">{user?.email}</span>
               <span className="inline-flex items-center gap-1 bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2 py-0.5 rounded-md border border-indigo-500/30">
                 <Shield className="w-3 h-3 text-indigo-400" />
                 {user?.role}
@@ -292,7 +292,7 @@ function TicketDashboard() {
 
             <button
               onClick={logout}
-              className="flex items-center gap-1.5 bg-rose-600/80 hover:bg-rose-600 text-white text-xs font-semibold px-3 py-1.5 rounded-xl transition-colors shadow-sm cursor-pointer"
+              className="shrink-0 flex items-center gap-1.5 bg-rose-600/80 hover:bg-rose-600 text-white text-xs font-semibold px-3 py-1.5 rounded-xl transition-colors shadow-sm cursor-pointer"
             >
               <LogOut className="w-3.5 h-3.5" />
               <span>Logout</span>
