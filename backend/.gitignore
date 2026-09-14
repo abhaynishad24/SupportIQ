@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment & Secrets
+.env
+*.env
+!.env.example
+
+# User Uploads
+uploads/
+uploads/*
+!uploads/.gitkeep
+
+# TypeScript compiled outputs (src me bani JS & Map files)
+src/**/*.js
+src/**/*.js.map
+src/**/*.d.ts
+src/**/*.d.ts.map
+
+# Build folder
+dist/
+build/
+
+# System & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+# TypeScript build cache
+tsconfig.tsbuildinfo

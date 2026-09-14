@@ -1,0 +1,21 @@
+# Root workspace
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backend
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/.env.*
+backend/uploads/
+backend/**/*.js
+backend/**/*.js.map
+backend/**/*.d.ts
